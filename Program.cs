@@ -32,7 +32,6 @@ var host = new HostBuilder()
             .MinimumLevel.Override("Azure.Core", LogEventLevel.Error)
             .Enrich.FromLogContext()
             .Enrich.WithOperationId()
-            .Enrich.WithCorrelationIdHeader("X-Correlation-ID")
             .WriteTo.ApplicationInsights
             (
                 services.GetRequiredService<TelemetryConfiguration>(),

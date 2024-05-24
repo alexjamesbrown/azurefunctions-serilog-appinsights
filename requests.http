@@ -8,7 +8,6 @@ GET {{BASE_URL}}/employee/1234/name
 ### due to LogContext.PushProperty
 ### Correlation ID only works in Rider (I think?)
 GET {{BASE_URL}}/employee/1234/name
-X-Correlation-ID: {{$uuid}}
 
 ### Will log EmployeeId in subsequent services
 ### due to LogContext.PushProperty
