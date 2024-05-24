@@ -5,7 +5,6 @@
         <OutputType>Exe</OutputType>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <FunctionsEnableWorkerIndexing>false</FunctionsEnableWorkerIndexing>
       <UserSecretsId>6fe742cf-8ed6-46d6-8387-0ad8bce7b619</UserSecretsId>
   </PropertyGroup>
     <ItemGroup>
