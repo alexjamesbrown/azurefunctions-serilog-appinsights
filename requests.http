@@ -1,0 +1,21 @@
+@BASE_URL = http://localhost:7071
+@CORRELATION_ID = {{$guid}} 
+
+### Will log EmployeeId in subsequent services
+### due to LogContext.PushProperty
+GET {{BASE_URL}}/employee/1234/name
+X-Correlation-ID: {{CORRELATION_ID}}
+
+### Will log EmployeeId in subsequent services
+### due to LogContext.PushProperty
+### (no correlation id)
+GET {{BASE_URL}}/employee/1234/name
+
+### Log error
+### Request will log a 404
+GET {{BASE_URL}}/employee/0/age
+X-Correlation-ID: {{CORRELATION_ID}}
+
+### Will log a warning
+GET {{BASE_URL}}/employee/12345678912345678912345/age
+X-Correlation-ID: {{CORRELATION_ID}}
