@@ -7,7 +7,7 @@
     },
     "logging": {
         "logLevel": {
-            "Function.*": "Warning"
+            "Function": "Warning"
         },
         "applicationInsights": {
             "samplingSettings": {
